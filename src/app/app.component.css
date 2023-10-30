@@ -1,0 +1,7 @@
+.main-title {
+    color: var(--blue);
+    margin-bottom: 2em;
+    margin-top: 3em;
+    text-align: center;
+    font-size: var(--title-text);
+}

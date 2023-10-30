@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --grey: #f7f7f9;
+    --dark-grey: #7c7c7c;
+    --darker-grey: #464646;
+    --blue: #3e5bf5;
+    --dark-blue: #303a59;
+    --grey-blue: #f6f9fc;
+    --smaller-text: 1em;
+    --small-text: 1.1em;
+    --medium-text: 1.3em;
+    --large-text: 1.6em;
+    --title-text: 2.3em;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--grey);
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --smaller-text: 0.6em;
+        --small-text: 0.8em;
+        --medium-text: 1em;
+        --large-text: 1.4em;
+        --title-text: 1.9em;
+    }
+}

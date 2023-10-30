@@ -1,0 +1,9 @@
+.pagination {
+    margin: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.page-info {
+    padding: 1em;
+}

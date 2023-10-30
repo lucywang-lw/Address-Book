@@ -1,0 +1,47 @@
+<main class="contact-details" *ngIf="contact">
+    
+    <section class="contact-main">
+        <img [src]="contact.picture.large" alt="profile picture" />
+        <h2 id="contact-name">{{ contact.name.first }} {{ contact.name.last }} </h2>
+        <h3 id="contact-title">{{ contact.email }} </h3>
+    </section>
+
+
+    <section class="contact-body">
+        <div class="contact-body-element">
+            <h2 class="contact-header"> Location </h2>
+            <p class="contact-info"> {{ contact.location.city }}, {{contact.location.state }}, {{ contact.location.country }} </p>
+        </div>
+
+        <div class="contact-body-element">
+            <h2 class="contact-header"> Time Zone </h2>
+            <p class="contact-info"> {{ contact.location.timezone.description }}, {{ contact.location.timezone.offset }} </p>
+        </div>
+
+        <div class="contact-body-element">
+            <h2 class="contact-header"> Phone </h2>
+            <p class="contact-info"> {{ contact.phone }} </p>
+        </div>
+
+        <div class="contact-body-element">
+            <h2 class="contact-header"> Cell </h2>
+            <p class="contact-info"> {{ contact.cell }} </p>
+        </div>
+
+        <div class="contact-body-element">
+            <h2 class="contact-header"> Nationality </h2>
+            <p class="contact-info"> {{ contact.nat }} </p>
+        </div>
+
+        <div class="contact-body-element">
+            <h2 class="contact-header"> DOB </h2>
+            <p class="contact-info"> {{ contact.dob.date }} </p>
+        </div>
+
+        <div class="contact-body-element">
+            <h2 class="contact-header"> Gender </h2>
+            <p class="contact-info"> {{ contact.gender }} </p>
+        </div>
+    </section>
+    
+</main>

@@ -1,27 +1,34 @@
 # AddressBook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
+## Start
+`npm start`, `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Development server
+`npm test` - run tests  
+`ng test --code-coverage` - run tests with code coverage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Approach
+ContactsService: this is where the API call is made, which is then used by different components.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ContactsComponent: component to list multiple contacts in table format. Fetches list of contacts from ContactsService. Updates on pageChange. Navigate to details page on click. Used *ngFor to display contacts.
 
-## Build
+ContactDetailsComponent: page to display more information about a specific contact. Takes page number and index of contact via route.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+PaginationComponent: pagination buttons to navigate to previous/next page. Takes current page number as @Input from ContactsComponent. Outputs changedPage EventEmitter with the new page.
 
-## Running unit tests
+## Features
+- pagination, can navigate to next/prev page
+- responsive design -- change table format for larger screens to grid format on smaller screens, different font sizes
+- scale and change color on hover over contact
+- unit tests (100% for statements, functions, lines, 85.71% for branches)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Given more time
+Given more time, a few quick implementations would include:
+- catch navigating to a non existing route
+- adding more CSS features, including animation
+- providing more meaningful error messages
+- explore more options to pass information between components in routing. This way, I would reduce the amount of calls I am making to the API. 
+- adding more accessibility features such as tooltips on hover. 
+- write more unit tests to over a wider range of cases.
